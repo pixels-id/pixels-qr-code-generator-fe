@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
-import { Card } from "../components/Main/Card";
+import { VrCard } from "../components/Main/VrCard";
 
-const Home: NextPage = () => {
+const QRvrCard: NextPage = () => {
   return (
     <Layout>
-      <Card />
+      <VrCard />
     </Layout>
   );
 };
 
-export default Home;
+export default QRvrCard;

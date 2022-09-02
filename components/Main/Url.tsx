@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 
-export const Card = () => {
+export const Url = (props: any) => {
   const saveSvgAsPng = require("save-svg-as-png");
   const imageOptions = {
     scale: 5,
@@ -19,22 +19,27 @@ export const Card = () => {
     );
   };
 
+  const submit = (e: any) => {
+    e.preventDefault();
+    setUrl(e.target.value);
+  };
+
   return (
-    <>
+    <div>
       <div className="basis-3/5">
         <h1 className="font-bold text-2xl text-green-900">Enter Your URL</h1>
         <p>
           You can track scans with dynamic QR codes, click here to get started
         </p>
-        <textarea
-          className="w-full p-3 align-text-top bg-white h-20 mt-2 focus:outline-none focus:border-green-500 focus:ring-green-500/20 focus:ring-4 focus:border rounded-md"
-          placeholder="https://remoter.id"
-          onChange={(e) => setUrl(e.target.value)}
-          value={url}
-        ></textarea>
-        <button className="w-full bg-green-800 text-white p-2 rounded-lg mt-2 hover:bg-green-900">
-          Generate QR Code
-        </button>
+        <form onSubmit={submit}>
+          <textarea
+            className="w-full p-3 align-text-top bg-white h-20 mt-2 focus:outline-none focus:border-green-500 focus:ring-green-500/20 focus:ring-4 focus:border rounded-md"
+            placeholder="https://remoter.id"
+          ></textarea>
+          <button className="w-full bg-green-800 text-white p-2 rounded-lg mt-2 hover:bg-green-900">
+            Generate QR Code
+          </button>
+        </form>
       </div>
       <div className="basis-2/5">
         <div className="bg-white md:mt-0 md:w-90 md:ml-10 rounded-lg p-5 mt-10">
@@ -65,6 +70,6 @@ export const Card = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
