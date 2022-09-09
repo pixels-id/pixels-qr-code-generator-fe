@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import ButtonNav from "../Molecules/ButtonNav";
+import ButtonNav from "../../components/Button/Nav";
 
 const ListButton = () => {
   return (
@@ -13,6 +13,11 @@ const ListButton = () => {
       <Link href="/qr-code-for-vrCard">
         <a>
           <ButtonNav text="vrCard" />
+        </a>
+      </Link>
+      <Link href="/social-media">
+        <a>
+          <ButtonNav text="Social Media" />
         </a>
       </Link>
     </div>

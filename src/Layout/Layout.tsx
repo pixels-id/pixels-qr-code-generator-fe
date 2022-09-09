@@ -1,7 +1,6 @@
 import Head from "next/head";
-import { Card } from "../components/Main/Card";
-import { Footer } from "../components/Navigation/Footer";
-import { Header } from "../components/Navigation/Header";
+import { Footer } from "./Navigation/Footer";
+import { Header } from "./Navigation/Header";
 import ListButton from "./Navigation/ListButton";
 
 const Layout = (props: any) => {
