@@ -1,18 +1,4 @@
 @tailwind base;
-@layer base {
-  .no-tailwindcss-base h1,
-  .no-tailwindcss-base h2 {
-    font-size: revert;
-    font-weight: revert;
-  }
-  .no-tailwindcss-base a,
-  .no-tailwindcss-base ol,
-  .no-tailwindcss-base ul {
-    list-style: revert;
-    margin: revert;
-    padding: revert;
-  }
-}
 @tailwind components;
 @tailwind utilities;
 
