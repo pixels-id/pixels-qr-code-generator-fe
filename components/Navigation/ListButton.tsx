@@ -15,6 +15,11 @@ const ListButton = () => {
           <ButtonNav text="vrCard" />
         </a>
       </Link>
+      <Link href="/qr-code-for-vacancy">
+        <a>
+          <ButtonNav text="Vacancy" />
+        </a>
+      </Link>
     </div>
   );
 };
