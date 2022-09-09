@@ -17,7 +17,6 @@
     "react-dom": "18.2.0",
     "react-file-base64": "^1.0.3",
     "react-hook-form": "^7.34.2",
-    "react-simple-wysiwyg": "^2.1.1",
     "save-svg-as-png": "^1.4.17",
     "yup": "^0.32.11"
   },
