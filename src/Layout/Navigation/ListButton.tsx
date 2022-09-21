@@ -15,7 +15,7 @@ const ListButton = () => {
           <ButtonNav text="vrCard" />
         </a>
       </Link>
-      <Link href="/social-media">
+      <Link href="/qr-code-for-socialmedia">
         <a>
           <ButtonNav text="Social Media" />
         </a>

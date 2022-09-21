@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm, useFieldArray, useWatch, Control } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import Image from "next/image";
 
 interface IFormInputs {
   image: string;
@@ -42,7 +43,24 @@ export const VrCard = () => {
     control,
   });
 
-  const onSubmit = (data: IFormInputs) => console.log(data);
+  const onSubmit = (data: IFormInputs) => {
+    fetch(
+      "https://pixels-qr-code-generator-api-production.up.railway.app/user",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          data: JSON.stringify(data),
+        }),
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success", data);
+      })
+      .catch((error) => {
+        console.error("Error", error);
+      });
+  };
 
   const uploadImage = async (e) => {
     const file = e.target.files[0];
@@ -132,7 +150,7 @@ export const VrCard = () => {
             )}
             {baseImage
               ? isChecked || (
-                  <img
+                  <Image
                     src={baseImage}
                     width={200}
                     height={200}
