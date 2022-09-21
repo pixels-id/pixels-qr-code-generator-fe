@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 export const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -8,11 +9,13 @@ export const Header = () => {
       <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="/">
-              <h2 className="text-2xl font-bold text-green-800">
-                PixelsQRCode
-              </h2>
-            </a>
+            <Link href="/">
+              <a>
+                <h2 className="text-2xl font-bold text-green-800">
+                  PixelsQRCode
+                </h2>
+              </a>
+            </Link>
             <div className="md:hidden">
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400"
@@ -73,34 +76,31 @@ export const Header = () => {
             </ul> */}
 
             <div className="mt-3 space-y-2 md:hidden">
-              <a
-                href="/"
-                className="inline-block w-full px-4 py-2 text-center text-white bg-green-800 rounded-md shadow hover:bg-green-900"
-              >
-                Sign in
-              </a>
-              <a
-                href="/"
-                className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-              >
-                Sign up
-              </a>
+              <Link href="/">
+                <a className="inline-block w-full px-4 py-2 text-center text-white bg-green-800 rounded-md shadow hover:bg-green-900">
+                  Sign in
+                </a>
+              </Link>
+
+              <Link href="/">
+                <a className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100">
+                  Sign up
+                </a>
+              </Link>
             </div>
           </div>
         </div>
         <div className="hidden space-x-2 md:inline-block">
-          <a
-            href="/"
-            className="px-4 py-2 text-white bg-green-800 rounded-md shadow hover:bg-green-900"
-          >
-            Sign in
-          </a>
-          <a
-            href="/"
-            className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-          >
-            Sign up
-          </a>
+          <Link href="/">
+            <a className="px-4 py-2 text-white bg-green-800 rounded-md shadow hover:bg-green-900">
+              Sign in
+            </a>
+          </Link>
+          <Link href="/">
+            <a className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100">
+              Sign up
+            </a>
+          </Link>
         </div>
       </div>
     </nav>
