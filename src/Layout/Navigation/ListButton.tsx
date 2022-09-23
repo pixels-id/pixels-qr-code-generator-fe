@@ -20,6 +20,11 @@ const ListButton = () => {
           <ButtonNav text="Social Media" />
         </a>
       </Link>
+      <Link href="/qr-code-for-audioplayer">
+        <a>
+          <ButtonNav text="Audio Player" />
+        </a>
+      </Link>
     </div>
   );
 };
