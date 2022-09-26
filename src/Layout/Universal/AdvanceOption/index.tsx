@@ -1,6 +1,6 @@
 import React from "react";
-import { Heading } from "../../../../Typography";
 import { FaCog } from "react-icons/fa";
+import { Heading } from "../../../Typography";
 
 const AdvanceOption = ({ register }) => {
   return (

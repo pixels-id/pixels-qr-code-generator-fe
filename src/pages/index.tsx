@@ -1,11 +1,11 @@
+import { Url } from "Layout/Main/Url/Url";
 import type { NextPage } from "next";
 import Layout from "../Layout/Layout";
-import { Card } from "../Layout/Main/Card";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Card />
+      <Url />
     </Layout>
   );
 };

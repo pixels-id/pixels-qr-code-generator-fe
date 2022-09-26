@@ -10,8 +10,8 @@ import { Heading } from "../../../Typography";
 import { ButtonSubmit } from "../../../components/Button";
 import Preview from "../../Preview";
 import BasicInfo from "./BasicInfo";
-import AdvanceOption from "./Advanced";
 import Social from "./Social";
+import AdvanceOption from "../../Universal/AdvanceOption";
 
 interface FormSosmedProps {
   nameQR: string;
