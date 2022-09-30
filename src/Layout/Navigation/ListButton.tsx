@@ -20,6 +20,11 @@ const ListButton = () => {
           <ButtonNav text="Social Media" />
         </a>
       </Link>
+      <Link href="/qr-code-for-vacancy">
+        <a>
+          <ButtonNav text="Vacancy" />
+        </a>
+      </Link>
     </div>
   );
 };

@@ -19,6 +19,10 @@ const Layout = (props: any) => {
           </div>
           {props.children}
         </div>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
         <Footer />
       </main>
     </div>
