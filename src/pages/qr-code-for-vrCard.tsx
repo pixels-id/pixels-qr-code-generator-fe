@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Layout from "../Layout/Layout";
-import { VrCard } from "../Layout/Main/VrCard";
+import { VrCard } from "../Layout/Main/VrCard/VrCard";
 
 const QRvrCard: NextPage = () => {
   return (

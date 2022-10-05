@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { FormInput, FormSelect } from "../../../../components/Form";
+import Image from "next/image";
 
-const AddButton = ({ register }) => {
+const UploudImage = ({ register, baseImage, uploadImage }) => {
   const [isChecked, setIsChecked] = useState(true);
+
   return (
     <div className="w-full rounded-lg p-5 border border-green-800/50 mt-2">
       <div className="flex justify-between">
-        <div className="order-first">Button</div>
+        <div className="order-first">Contact Picture</div>
         <label
           htmlFor="small-toggle"
           className="order-last mt-1 relative items-center cursor-pointer"
@@ -23,28 +24,40 @@ const AddButton = ({ register }) => {
       {isChecked ? (
         ""
       ) : (
-        <div className="flex place-items-center mt-4">
-          <div className="basis-1/3">
-            <FormSelect register={register} name="nameButton">
-              <option>Buy Now</option>
-              <option>View Full Album</option>
-              <option>Visit Us Online</option>
-              <option>Learn More</option>
-              <option>Custom</option>
-            </FormSelect>
-          </div>
-          <div className="basis-2/3 ml-3">
-            <FormInput
-              register={register}
-              name="linkRedirect"
-              placeholder="www.yourwebsite.com"
-            />
-          </div>
-          {/* <FormInput register={register} name="nameButton" placeholder="Please type your link title" /> */}
-        </div>
+        <>
+          <input
+            type="file"
+            className="block w-full text-sm text-slate-500
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-full file:border-0
+        file:text-sm file:font-semibold
+        file:bg-green-800 file:text-white
+        hover:file:bg-green-900 mt-2"
+            onChange={(e) => {
+              uploadImage(e);
+            }}
+          />
+          <input
+            {...register("image")}
+            className=""
+            type="text"
+            value={baseImage}
+          />
+        </>
       )}
+      {baseImage
+        ? isChecked || (
+            <Image
+              src={baseImage}
+              width={200}
+              height={200}
+              alt="qr code"
+              className="mx-auto my-2 rounded-lg"
+            />
+          )
+        : ""}
     </div>
   );
 };
 
-export default AddButton;
+export default UploudImage;
