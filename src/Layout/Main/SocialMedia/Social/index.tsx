@@ -4,8 +4,8 @@ import { FaEllipsisV } from "react-icons/fa";
 import { TiDelete } from "react-icons/ti";
 import { HiOutlinePresentationChartLine } from "react-icons/hi";
 import { Heading } from "../../../../Typography";
-import AddMore from "./addMore";
-import IconField from "./iconField";
+import AddMore from "./AddMore";
+import IconField from "./IconField";
 
 const Social = ({ fields, register, remove, append, swap }) => {
   const handleOnDragEnd = (result) => {
